@@ -23,7 +23,7 @@ var fibonacci = (number) => {
     }, 1000)
 }
 
-var onlyEvent = (arr) => {
+var onlyEven = (arr) => {
     var result = []
     var tempArr = []
     for(var i=0; i < arr.length; i++){
