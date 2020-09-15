@@ -1,4 +1,4 @@
-var fibonacci = function(number){
+var fibonacci = (number) => {
     if(number === undefined){
         number = 10
     }
@@ -15,10 +15,25 @@ var fibonacci = function(number){
         tempCurrent = current
     }
 
-    var interval = setInterval(function(){
+    var interval = setInterval(() =>{
         console.log(fibonacciArray[index++]);
         if(index == fibonacciArray.length){
             clearInterval(interval);
         }
     }, 1000)
+}
+
+var onlyEvent = (arr) => {
+    var result = []
+    var tempArr = []
+    for(var i=0; i < arr.length; i++){
+        for(var index=0; index < arr[i].length; index++){
+            if(arr[i][index] % 2 === 0){
+                tempArr.push(arr[i][index])
+            }
+        }
+        result.push(tempArr)
+        tempArr = []
+    }
+    console.log(result)
 }
